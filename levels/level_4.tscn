@@ -18,12 +18,12 @@ script = ExtResource("1_5pu08")
 metadata/_custom_type_script = "uid://cx1gdf525xwf5"
 
 [node name="Level4Background" type="Sprite2D" parent="." unique_id=1973337230]
-position = Vector2(586, 337)
+position = Vector2(574, 337)
 scale = Vector2(1.5368272, 2.0807366)
 texture = ExtResource("2_c8stx")
 
 [node name="Level4Car" type="Sprite2D" parent="." unique_id=1111336806]
-position = Vector2(145, 455)
+position = Vector2(131, 455)
 scale = Vector2(1.7646279, 1.7646279)
 texture = ExtResource("3_aqy51")
 
@@ -34,7 +34,7 @@ position = Vector2(-0.8500366, 1.1333923)
 shape = SubResource("RectangleShape2D_hokjj")
 
 [node name="Level4Sign" type="Sprite2D" parent="." unique_id=225611762]
-position = Vector2(1103.275, 438)
+position = Vector2(1089.275, 438)
 scale = Vector2(1.7646279, 1.7646279)
 texture = ExtResource("5_66w8i")
 
@@ -53,13 +53,13 @@ position = Vector2(0.2833252, 1.1333618)
 shape = SubResource("RectangleShape2D_0fd8o")
 
 [node name="FallingRock" parent="." unique_id=14842685 instance=ExtResource("6_0fd8o")]
-position = Vector2(312, 494)
+position = Vector2(298, 494)
 
 [node name="FallingRock2" parent="." unique_id=243760854 instance=ExtResource("6_0fd8o")]
-position = Vector2(591, 493)
+position = Vector2(577, 493)
 
 [node name="FallingRock3" parent="." unique_id=2000868472 instance=ExtResource("6_0fd8o")]
-position = Vector2(854, 494)
+position = Vector2(840, 494)
 
 [connection signal="area_entered" from="Level4Car/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="input_event" from="Level4Car/Area2D" to="." method="_on_area_2d_input_event"]
