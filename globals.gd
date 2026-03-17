@@ -4,7 +4,8 @@ var selected_level_id = 1
 var all_levels=[
 	"res://levels/Level1.tscn",
 	"res://levels/Level2.tscn",
-	"res://levels/Level3.tscn"
+	"res://levels/Level3.tscn",
+	"res://levels/level_4.tscn"
 ]
 
 var level_times=[]

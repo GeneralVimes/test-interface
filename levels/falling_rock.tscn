@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cehm1oh3wtw2w"]
+
+[ext_resource type="Texture2D" uid="uid://c6nk0imq2d8qs" path="res://levels/Level4Rock.png" id="1_0mr6n"]
+[ext_resource type="Script" uid="uid://cl57xbwn3m8t7" path="res://levels/falling_rock.gd" id="1_4ccnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ccnl"]
+size = Vector2(76, 62)
+
+[node name="FallingRock" type="Area2D" unique_id=14842685]
+script = ExtResource("1_4ccnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1458623232]
+position = Vector2(4, -32)
+shape = SubResource("RectangleShape2D_4ccnl")
+
+[node name="Level4Rock" type="Sprite2D" parent="." unique_id=1908988937]
+position = Vector2(0, -36)
+scale = Vector2(1.7750001, 1.775)
+texture = ExtResource("1_0mr6n")

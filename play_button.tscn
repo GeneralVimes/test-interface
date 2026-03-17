@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhnhdbjth0gye"]
+
+[ext_resource type="Texture2D" uid="uid://dubsfsdrf0hr4" path="res://levels/PlayButton.png" id="1_v8f0b"]
+
+[node name="PlayButton" type="TextureButton" unique_id=56785698]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_v8f0b")

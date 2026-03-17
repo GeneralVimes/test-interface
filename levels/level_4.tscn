@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dbco3mkiw1t7k"]
+
+[ext_resource type="Script" uid="uid://sptl0xss5r38" path="res://levels/level_4.gd" id="1_5pu08"]
+[ext_resource type="Texture2D" uid="uid://hu5mtrbw21pe" path="res://levels/Level4Background.png" id="2_c8stx"]
+[ext_resource type="Texture2D" uid="uid://hcrlle30r2yl" path="res://levels/Level4Car.png" id="3_aqy51"]
+[ext_resource type="Texture2D" uid="uid://cu5rra06bu5j5" path="res://levels/Level4Sign.png" id="5_66w8i"]
+[ext_resource type="PackedScene" uid="uid://cehm1oh3wtw2w" path="res://levels/falling_rock.tscn" id="6_0fd8o"]
+[ext_resource type="PackedScene" uid="uid://bhnhdbjth0gye" path="res://play_button.tscn" id="6_hokjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hokjj"]
+size = Vector2(61.769398, 39.668446)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fd8o"]
+size = Vector2(36.83496, 57.80256)
+
+[node name="Level4" type="Node2D" unique_id=1363640832]
+script = ExtResource("1_5pu08")
+metadata/_custom_type_script = "uid://cx1gdf525xwf5"
+
+[node name="Level4Background" type="Sprite2D" parent="." unique_id=1973337230]
+position = Vector2(586, 337)
+scale = Vector2(1.5368272, 2.0807366)
+texture = ExtResource("2_c8stx")
+
+[node name="Level4Car" type="Sprite2D" parent="." unique_id=1111336806]
+position = Vector2(145, 455)
+scale = Vector2(1.7646279, 1.7646279)
+texture = ExtResource("3_aqy51")
+
+[node name="Area2D" type="Area2D" parent="Level4Car" unique_id=1955750191]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level4Car/Area2D" unique_id=1297965382]
+position = Vector2(-0.8500366, 1.1333923)
+shape = SubResource("RectangleShape2D_hokjj")
+
+[node name="Level4Sign" type="Sprite2D" parent="." unique_id=225611762]
+position = Vector2(1103.275, 438)
+scale = Vector2(1.7646279, 1.7646279)
+texture = ExtResource("5_66w8i")
+
+[node name="PlayButton" parent="Level4Sign" unique_id=56785698 instance=ExtResource("6_hokjj")]
+visible = false
+offset_left = -21.534302
+offset_top = -32.868134
+offset_right = 239.4657
+offset_bottom = 232.13187
+scale = Vector2(0.16667262, 0.16667262)
+
+[node name="SignArea" type="Area2D" parent="Level4Sign" unique_id=290265584]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level4Sign/SignArea" unique_id=729595583]
+position = Vector2(0.2833252, 1.1333618)
+shape = SubResource("RectangleShape2D_0fd8o")
+
+[node name="FallingRock" parent="." unique_id=14842685 instance=ExtResource("6_0fd8o")]
+position = Vector2(312, 494)
+
+[node name="FallingRock2" parent="." unique_id=243760854 instance=ExtResource("6_0fd8o")]
+position = Vector2(591, 493)
+
+[node name="FallingRock3" parent="." unique_id=2000868472 instance=ExtResource("6_0fd8o")]
+position = Vector2(854, 494)
+
+[connection signal="area_entered" from="Level4Car/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="input_event" from="Level4Car/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="button_down" from="Level4Sign/PlayButton" to="." method="_on_play_button_button_down"]
