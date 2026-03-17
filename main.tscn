@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bn1og7wteo15p"]
+
+[ext_resource type="Script" uid="uid://be1vnmtnp6juf" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="Theme" id="Theme_ig7tw"]
+default_font_size = 100
+
+[node name="Main" type="Node2D" unique_id=15133703]
+script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=118473885]
+offset_left = 4.0
+offset_right = 1152.0
+offset_bottom = 650.0
+color = Color(0.7764706, 0.35686275, 1, 1)
+
+[node name="Button" type="Button" parent="." unique_id=767231977]
+offset_left = 460.0
+offset_top = 284.0
+offset_right = 656.0
+offset_bottom = 345.0
+text = "Клікни мене!"
+
+[node name="Button3" type="Button" parent="." unique_id=671280677]
+offset_left = 686.0
+offset_top = 136.0
+offset_right = 856.0
+offset_bottom = 229.0
+text = "Button3"
+
+[node name="Button2" type="Button" parent="." unique_id=331771657]
+offset_left = 271.0
+offset_top = 434.0
+offset_right = 528.0
+offset_bottom = 538.0
+text = "Button2"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=1901545631]
+offset_left = 519.0
+offset_top = 362.0
+offset_right = 613.0
+offset_bottom = 391.0
+
+[node name="Button4" type="Button" parent="." unique_id=94651392]
+offset_left = 168.0
+offset_top = 191.0
+offset_right = 367.0
+offset_bottom = 269.0
+
+[node name="Button5" type="Button" parent="." unique_id=98616201]
+offset_left = 847.0
+offset_top = 408.0
+offset_right = 1013.0
+offset_bottom = 527.0
+theme = SubResource("Theme_ig7tw")
+text = "1
+"
+
+[node name="Button6" type="Button" parent="." unique_id=1585904019]
+offset_left = 151.0
+offset_top = 73.0
+offset_right = 291.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="." unique_id=1502563072]
+offset_left = 153.0
+offset_top = 42.0
+offset_right = 302.0
+offset_bottom = 65.0
+text = "0"
+
+[node name="Timer" type="Timer" parent="." unique_id=65300793]
+autostart = true
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="Button5" to="." method="_on_button_5_button_down"]
+[connection signal="button_down" from="Button6" to="." method="_on_button_6_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
