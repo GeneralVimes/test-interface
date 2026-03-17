@@ -19,7 +19,7 @@ offset_top = 127.0
 offset_right = 1080.0
 offset_bottom = 210.0
 theme = SubResource("Theme_mmhpo")
-text = "Знайдіть ту дольку, що відрязняється"
+text = "Знайдіть ту дольку, що відрізняється"
 
 [node name="Level3Small" type="Sprite2D" parent="." unique_id=1200347186]
 z_index = -94

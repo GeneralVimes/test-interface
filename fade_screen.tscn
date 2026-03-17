@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d05fsyevhvbnr"]
+
+[ext_resource type="Script" uid="uid://ftgi7h6ae7rl" path="res://fade_screen.gd" id="1_pparh"]
+
+[node name="FadeScreen" type="ColorRect" unique_id=459810786]
+offset_left = -34.0
+offset_top = -25.0
+offset_right = 1187.0
+offset_bottom = 681.0
+script = ExtResource("1_pparh")

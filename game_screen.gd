@@ -30,10 +30,10 @@ func _on_timer_timeout() -> void:
 	$Label2.text = "Час гри: "+str(game_time)
 	
 func loose_game():
-	get_tree().change_scene_to_file("res://defeat_screen.tscn")
+	Globals.transit_to_scene("res://defeat_screen.tscn")
 	
 func win_game():
-	get_tree().change_scene_to_file("res://victory_screen.tscn")
+	Globals.transit_to_scene("res://victory_screen.tscn")
 
 
 func _on_button_win_button_down() -> void:
