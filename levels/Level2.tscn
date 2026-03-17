@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c0plollewpw4e"]
+
+[ext_resource type="Script" uid="uid://b2763ubeol6fg" path="res://levels/level_2.gd" id="1_f5x84"]
+[ext_resource type="Texture2D" uid="uid://belyilo8xqcxv" path="res://levels/Level2Caption.png" id="2_432n0"]
+
+[node name="Level2" type="Node2D" unique_id=943962593]
+script = ExtResource("1_f5x84")
+
+[node name="Level2Caption" type="Sprite2D" parent="." unique_id=1007097169]
+position = Vector2(602, 197)
+texture = ExtResource("2_432n0")
+
+[node name="Button" type="Button" parent="." unique_id=649774336]
+offset_left = 301.0
+offset_top = 417.0
+offset_right = 460.0
+offset_bottom = 473.0
+text = "8"
+
+[node name="Button3" type="Button" parent="." unique_id=2033965238]
+offset_left = 301.0
+offset_top = 509.0
+offset_right = 460.0
+offset_bottom = 565.0
+text = "10"
+
+[node name="Button2" type="Button" parent="." unique_id=1068882691]
+offset_left = 563.0
+offset_top = 418.0
+offset_right = 722.0
+offset_bottom = 474.0
+text = "9"
+
+[node name="Button4" type="Button" parent="." unique_id=565843463]
+offset_left = 560.0
+offset_top = 516.0
+offset_right = 719.0
+offset_bottom = 572.0
+text = "11"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button3" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_button_down"]

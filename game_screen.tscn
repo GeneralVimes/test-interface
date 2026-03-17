@@ -30,6 +30,7 @@ text = "Час гри: 0"
 autostart = true
 
 [node name="ButtonWin" type="Button" parent="." unique_id=406503272]
+visible = false
 offset_left = 226.0
 offset_top = 489.0
 offset_right = 395.0
@@ -37,6 +38,7 @@ offset_bottom = 566.0
 text = "Виграти"
 
 [node name="ButtonLoose" type="Button" parent="." unique_id=376010523]
+visible = false
 offset_left = 823.0
 offset_top = 482.0
 offset_right = 992.0

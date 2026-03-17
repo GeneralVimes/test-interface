@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xs37el53el4c"]
+
+[ext_resource type="Texture2D" uid="uid://cw1lt5k6gmadi" path="res://levels/Level3Big.png" id="1_emue3"]
+[ext_resource type="Script" uid="uid://bh2fl5ikv43ki" path="res://melon_part.gd" id="2_4j1y2"]
+
+[node name="MelonPart" type="TextureButton" unique_id=889261741]
+offset_left = -61.0
+offset_top = -42.0
+offset_right = 61.0
+offset_bottom = 53.0
+texture_normal = ExtResource("1_emue3")
+script = ExtResource("2_4j1y2")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

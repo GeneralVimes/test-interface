@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bep1qq6xwdmpw"]
+
+[ext_resource type="Script" uid="uid://lbx5c8yl22x3" path="res://levels/level_3.gd" id="1_gq8fh"]
+[ext_resource type="Texture2D" uid="uid://daqiyergx2t05" path="res://levels/Level3Small.png" id="2_r8psn"]
+[ext_resource type="PackedScene" uid="uid://xs37el53el4c" path="res://melon_part.tscn" id="3_r8psn"]
+
+[sub_resource type="Theme" id="Theme_mmhpo"]
+default_font_size = 48
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd3y7"]
+size = Vector2(78, 66)
+
+[node name="Level3" type="Node2D" unique_id=1724869158]
+script = ExtResource("1_gq8fh")
+
+[node name="Label" type="Label" parent="." unique_id=645134208]
+offset_left = 115.0
+offset_top = 127.0
+offset_right = 1080.0
+offset_bottom = 210.0
+theme = SubResource("Theme_mmhpo")
+text = "Знайдіть ту дольку, що відрязняється"
+
+[node name="Level3Small" type="Sprite2D" parent="." unique_id=1200347186]
+z_index = -94
+position = Vector2(605, 338)
+texture = ExtResource("2_r8psn")
+
+[node name="Area2D" type="Area2D" parent="Level3Small" unique_id=1795175120]
+z_index = -117
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level3Small/Area2D" unique_id=1140628196]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_rd3y7")
+
+[node name="MelonPart" parent="." unique_id=889261741 instance=ExtResource("3_r8psn")]
+offset_left = 279.0
+offset_top = 292.0
+offset_right = 401.0
+offset_bottom = 387.0
+
+[node name="MelonPart2" parent="." unique_id=355672951 instance=ExtResource("3_r8psn")]
+offset_left = 545.0
+offset_top = 448.0
+offset_right = 667.0
+offset_bottom = 543.0
+
+[node name="MelonPart4" parent="." unique_id=1490016167 instance=ExtResource("3_r8psn")]
+offset_left = 765.0
+offset_top = 280.0
+offset_right = 887.0
+offset_bottom = 375.0
+
+[node name="MelonPart5" parent="." unique_id=61007323 instance=ExtResource("3_r8psn")]
+offset_left = 774.0
+offset_top = 446.0
+offset_right = 896.0
+offset_bottom = 541.0
+
+[node name="MelonPart6" parent="." unique_id=383916480 instance=ExtResource("3_r8psn")]
+offset_left = 278.0
+offset_top = 446.0
+offset_right = 400.0
+offset_bottom = 541.0
+
+[node name="MelonPart3" parent="." unique_id=1941406491 instance=ExtResource("3_r8psn")]
+offset_left = 552.0
+offset_top = 297.0
+offset_right = 674.0
+offset_bottom = 392.0
+
+[connection signal="input_event" from="Level3Small/Area2D" to="." method="_correct_answer_click"]
