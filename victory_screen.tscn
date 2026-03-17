@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cdv0ydojhdbnh"]
+
+[ext_resource type="Script" uid="uid://by3m71whep3l1" path="res://victory_screen.gd" id="1_rbj82"]
+
+[node name="VictoryScreen" type="Node2D" unique_id=1854702774]
+script = ExtResource("1_rbj82")
+
+[node name="Label" type="Label" parent="." unique_id=22069963]
+offset_left = 521.0
+offset_top = 56.0
+offset_right = 728.0
+offset_bottom = 79.0
+text = "Вітаємо!"
+
+[node name="Button" type="Button" parent="." unique_id=1190248027]
+offset_left = 484.0
+offset_top = 230.0
+offset_right = 634.0
+offset_bottom = 291.0
+text = "Вибір рівня"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://73tf1q2donds"]
+
+[ext_resource type="Script" uid="uid://dqx1ooyeppiw5" path="res://game_menu_screen.gd" id="1_te1tj"]
+
+[node name="GameMenuScreen" type="Node2D" unique_id=1291895471]
+process_mode = 3
+script = ExtResource("1_te1tj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1728639225]
+offset_left = 62.0
+offset_top = 53.0
+offset_right = 1108.0
+offset_bottom = 587.0
+color = Color(0.22352941, 0.50980395, 1, 0.49411765)
+
+[node name="Label" type="Label" parent="." unique_id=1884795873]
+offset_left = 490.0
+offset_top = 209.0
+offset_right = 720.0
+offset_bottom = 263.0
+text = "Меню"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=604490031]
+offset_left = 540.0
+offset_top = 261.0
+offset_right = 682.0
+offset_bottom = 292.0
+text = "Продовжити гру"
+
+[node name="Button2" type="Button" parent="." unique_id=188072253]
+offset_left = 543.0
+offset_top = 324.0
+offset_right = 685.0
+offset_bottom = 355.0
+text = "Вийти"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

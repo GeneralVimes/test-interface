@@ -4,6 +4,7 @@ var x = 0
 
 func _on_button_button_down() -> void:
 	print("click")
+	
 	if $CheckButton.button_pressed:
 		$Button.position.x+=10
 	else:

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://5ah1ovqjo3bp"]
+
+[ext_resource type="Script" uid="uid://qseu30dbnm0c" path="res://defeat_screen.gd" id="1_ilj6y"]
+
+[node name="DefeatScreen" type="Node2D" unique_id=642366068]
+script = ExtResource("1_ilj6y")
+
+[node name="Label" type="Label" parent="." unique_id=1862398887]
+offset_left = 521.0
+offset_top = 56.0
+offset_right = 728.0
+offset_bottom = 79.0
+text = "Ви програли"
+
+[node name="Button" type="Button" parent="." unique_id=1364991894]
+offset_left = 484.0
+offset_top = 230.0
+offset_right = 634.0
+offset_bottom = 291.0
+text = "Вибір рівня"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

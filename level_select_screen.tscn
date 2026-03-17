@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b4q0xnap5qyg4"]
+
+[ext_resource type="Script" uid="uid://bu6f6i0mq3mxk" path="res://level_select_screen.gd" id="1_oumdo"]
+
+[node name="LevelSelectScreen" type="Node2D" unique_id=2137552855]
+script = ExtResource("1_oumdo")
+
+[node name="Button" type="Button" parent="." unique_id=1026498552]
+offset_left = 315.0
+offset_top = 231.0
+offset_right = 385.0
+offset_bottom = 294.0
+text = "1"
+
+[node name="Button2" type="Button" parent="." unique_id=1111669880]
+offset_left = 402.0
+offset_top = 231.0
+offset_right = 472.0
+offset_bottom = 294.0
+text = "2"
+
+[node name="Button3" type="Button" parent="." unique_id=848245016]
+offset_left = 499.0
+offset_top = 231.0
+offset_right = 569.0
+offset_bottom = 294.0
+text = "3"
+
+[node name="ButtonBack" type="Button" parent="." unique_id=2125003435]
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 160.0
+offset_bottom = 70.0
+text = "Назад"
+
+[node name="Label" type="Label" parent="." unique_id=2011944224]
+offset_left = 342.0
+offset_top = 31.0
+offset_right = 538.0
+offset_bottom = 73.0
+text = "Обрати рівень"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down" binds= [1]]
+[connection signal="button_down" from="Button2" to="." method="_on_button_button_down" binds= [2]]
+[connection signal="button_down" from="Button3" to="." method="_on_button_button_down" binds= [3]]
+[connection signal="button_down" from="ButtonBack" to="." method="_on_button_back_button_down"]

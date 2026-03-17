@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cw1gdjxavxv72"]
+
+[ext_resource type="Texture2D" uid="uid://btc3mue4ptuwa" path="res://icon.svg" id="1_8wl6p"]
+[ext_resource type="Script" uid="uid://ciysp6pl7shnt" path="res://credits_screen.gd" id="1_cb4i0"]
+
+[sub_resource type="Theme" id="Theme_cb4i0"]
+default_font_size = 48
+
+[node name="CreditsScreen" type="Node2D" unique_id=2091978637]
+script = ExtResource("1_cb4i0")
+
+[node name="Label" type="Label" parent="." unique_id=320574449]
+offset_left = 228.0
+offset_top = 60.0
+offset_right = 1072.0
+offset_bottom = 127.0
+theme = SubResource("Theme_cb4i0")
+text = "Автори гри:"
+
+[node name="Button" type="Button" parent="." unique_id=1497959620]
+offset_left = 24.0
+offset_top = 544.0
+offset_right = 233.0
+offset_bottom = 610.0
+text = "Назад"
+
+[node name="Button2" type="Button" parent="." unique_id=928676149]
+offset_left = 400.0
+offset_top = 285.0
+offset_right = 543.0
+offset_bottom = 350.0
+text = "Сайт"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=132476561]
+position = Vector2(138, 96)
+texture = ExtResource("1_8wl6p")
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=1659345273]
+offset_left = 393.0
+offset_top = 370.0
+offset_right = 585.0
+offset_bottom = 410.0
+text = "ЕТІ"
+uri = "https://eti.edu.ua/"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

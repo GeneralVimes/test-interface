@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="TestInterface"
-run/main_scene="uid://bn1og7wteo15p"
+run/main_scene="uid://b0kp1l8e77n24"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*uid://c1remevqdp8cb"
 
 [physics]
 

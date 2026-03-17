@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d16l80n3f470n"]
+
+[ext_resource type="Script" uid="uid://bsg6qpl46r4qu" path="res://game_screen.gd" id="1_t5odh"]
+
+[node name="GameScreen" type="Node2D" unique_id=683557673]
+script = ExtResource("1_t5odh")
+
+[node name="Label" type="Label" parent="." unique_id=114002150]
+offset_left = 532.0
+offset_top = 23.0
+offset_right = 768.0
+offset_bottom = 76.0
+text = "Розпочалася гра"
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="." unique_id=1525166117]
+offset_left = 1090.0
+offset_top = 2.0
+offset_right = 1144.0
+offset_bottom = 51.0
+
+[node name="Label2" type="Label" parent="." unique_id=1637735166]
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 102.0
+offset_bottom = 42.0
+text = "Час гри: 0"
+
+[node name="Timer" type="Timer" parent="." unique_id=246240118]
+autostart = true
+
+[node name="ButtonWin" type="Button" parent="." unique_id=406503272]
+offset_left = 226.0
+offset_top = 489.0
+offset_right = 395.0
+offset_bottom = 566.0
+text = "Виграти"
+
+[node name="ButtonLoose" type="Button" parent="." unique_id=376010523]
+offset_left = 823.0
+offset_top = 482.0
+offset_right = 992.0
+offset_bottom = 559.0
+text = "Програти"
+
+[node name="Label3" type="Label" parent="." unique_id=1561555980]
+offset_left = 557.0
+offset_top = 62.0
+offset_right = 751.0
+offset_bottom = 98.0
+text = "Рівень 1"
+
+[connection signal="button_down" from="MenuButton" to="." method="_on_menu_button_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="ButtonWin" to="." method="_on_button_win_button_down"]
+[connection signal="button_down" from="ButtonLoose" to="." method="_on_button_loose_button_down"]
