@@ -26,6 +26,13 @@ offset_right = 102.0
 offset_bottom = 42.0
 text = "Час гри: 0"
 
+[node name="LabelClicks" type="Label" parent="." unique_id=641856670]
+offset_left = 12.0
+offset_top = 37.0
+offset_right = 83.0
+offset_bottom = 60.0
+text = "Кліків: 0"
+
 [node name="Timer" type="Timer" parent="." unique_id=246240118]
 autostart = true
 
